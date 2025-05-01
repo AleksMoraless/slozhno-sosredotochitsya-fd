@@ -5,10 +5,14 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  block-size: 100%;
+  /* font-size: 16px; */
+}
 
 body {
-  min-inline-size: 375px;
-  max-inline-size: 1440px;
+  min-inline-size: var(--min-width);
+  max-inline-size: var(--max-width);
   margin: 0 auto;
 }
 
@@ -20,6 +24,9 @@ h5,
 h6,
 p {
   margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: inherit;
 }
 
 ul {
@@ -33,10 +40,30 @@ picture {
   padding: 0;
 }
 
+img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 button,
 a {
   color: currentColor;
+  text-decoration: none;
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  cursor: pointer;
+}
+
+button {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: inherit;
+  font: inherit;
+  font-weight: normal;
+	line-height: normal;
 }

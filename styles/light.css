@@ -1,16 +1,58 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: rgba(53, 52, 48, 1);
+    --accent-bgr-color: rgba(255, 141, 203, 1);
+    --accent-shadow-color: rgba(255, 141, 203, 1);
+    --accent-title-color: rgba(53, 52, 48, 1);
+    --link-hover-color: rgba(50, 49, 45, 0.4); 
+    --text-color: rgba(53, 52, 48, 1);
+    --main-title-color: rgba(255, 194, 230, 1);
+    --bground-color: rgba(255, 241, 247, 1);
+    --bground-image-src: url(../images/cover-image-light.png);
+  }
+
+  .header::before, .header::after {
+    --accent-bgr-color: var(--accent-color);
+  }
+  
+  .footer__title {
+    --accent-shadow-color: rgba(255, 0, 112, 1);
+  }
+  
+  .dec-element {
+    display: none;
+  }
+  
+  .footer::before, .footer::after {
+    --accent-bgr-color: var(--accent-color);
+  }
+} 
 
 :root.theme-light {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --accent-color: rgba(53, 52, 48, 1);
+  --accent-bgr-color: rgba(255, 141, 203, 1);
+  --accent-shadow-color: rgba(255, 141, 203, 1);
+  --accent-title-color: rgba(53, 52, 48, 1);
+  --link-hover-color: rgba(50, 49, 45, 0.4); 
+  --text-color: rgba(53, 52, 48, 1);
+  --main-title-color: rgba(255, 194, 230, 1);
+  --bground-color: rgba(255, 241, 247, 1);
+  --bground-image-src: url(../images/cover-image-light.png);
 }
 
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
+.theme-light .header::before, .header::after {
+  --accent-bgr-color: var(--accent-color);
+}
+
+.theme-light .footer__title {
+  --accent-shadow-color: rgba(255, 0, 112, 1);
+}
+
+.theme-light .dec-element {
+  display: none;
+}
+
+.theme-light .footer::before, .footer::after {
+  --accent-bgr-color: var(--accent-color);
 }
