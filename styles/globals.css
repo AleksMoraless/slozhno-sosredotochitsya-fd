@@ -13,7 +13,7 @@ html {
 body {
   min-inline-size: var(--min-width);
   max-inline-size: var(--max-width);
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
 }
 
