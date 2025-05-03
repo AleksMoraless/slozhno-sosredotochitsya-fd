@@ -229,6 +229,18 @@
   margin-block-end: 20px;
 }
 
+
+
+.section-advices__articles::before {
+    content: attr(aria-label);
+    font-size: var(--font-size);
+    color: var(--accent-title-color);
+    margin-block-end: var(--section-grid-gap);
+    font-weight: bold;
+    background-color: var(--accent-color);
+    display: block;
+}
+
 .section-advices__articles .article__title {
   font-weight: normal;
 }
