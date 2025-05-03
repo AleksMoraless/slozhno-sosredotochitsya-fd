@@ -237,7 +237,7 @@
     color: var(--accent-title-color);
     margin-block-end: var(--section-grid-gap);
     font-weight: bold;
-    background-color: var(--accent-color);
+    background-color: var(--accent-bgr-color);
     display: block;
 }
 
