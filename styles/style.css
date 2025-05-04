@@ -84,7 +84,7 @@
   flex-direction: column;
   margin: 0 auto;
   color: var(--text-color);
-  font-family: var(--font), sans-serif;
+  font-family: var(--font), monospace, sans-serif;
   font-weight: normal;
   font-size: var(--font-size);
   line-height: var(--main-line-height);
@@ -260,7 +260,7 @@
 /*? FOOTER SECTION*/
 .footer {
   position: relative;
-  min-block-size: 100vh;
+  min-block-size: max(200px, 100vh);
   inline-size: 100%;
   display: grid;
   justify-items: center;
@@ -346,5 +346,9 @@
   .section-gallery__image {
     grid-column: 1 / auto;
     grid-row: initial;
+  }
+
+  .footer {
+    min-block-size: max(200px, 100dvb);
   }
 }
